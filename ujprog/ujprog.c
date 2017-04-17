@@ -373,7 +373,7 @@ set_port_mode(int mode)
 
 #ifdef WIN32
 static char *
-strtok_r(char *s1, const char *s2, char **lasts)
+strtok_r_hoge(char *s1, const char *s2, char **lasts)
 {
 	char *ret;
 
@@ -2063,8 +2063,8 @@ exec_svf_mem(char *fbuf, int lines_tot, int debug)
 		progress_perc = lno * 1005 / (lines_tot * 10);
 
 		/* Pre-parse input, join multiple lines to a single command */
-		for (item = strtok_r(linebuf, sep, &brkt); item;
-		    item = strtok_r(NULL, sep, &brkt)) {
+		for (item = strtok_r_hoge(linebuf, sep, &brkt); item;
+		    item = strtok_r_hoge(NULL, sep, &brkt)) {
 			/* Skip comments */
 			if (*item == '!')
 				break;

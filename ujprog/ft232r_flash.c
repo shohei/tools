@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include <ftdi.h>
-#include <libusb.h>
+#include "ftdi.h""
+#include "libusb.h"
 
 
 #define	FT232_EEPROM_SIZE	128
